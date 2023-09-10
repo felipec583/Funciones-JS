@@ -1,0 +1,7 @@
+#Ignore Node_modules
+node_modules/
+# ignore json files
+*.json
+
+#Ignore eslint config file
+.eslintrc.js
