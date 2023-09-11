@@ -1,3 +1,4 @@
+// Función para crear divs
 function createDivBox(bgColor) {
   const newDiv = document.createElement("div");
   const body = document.querySelector("body");
@@ -14,6 +15,20 @@ function colorBox(variable, bgColor = "white") {
   variable.style.backgroundColor = bgColor;
   variable.style.border = "black solid";
 }
+let color;
+const keyDiv = document.querySelector("#key");
+colorBox(keyDiv);
+
+document.addEventListener("keydown", (e) => {
+  keyDiv.style.backgroundColor = color;
+  if (e.key === "a") {
+    color = "pink";
+  } else if (e.key === "s") {
+    color = "orange";
+  } else if (e.key === "d") {
+    color = "cyan";
+  }
+});
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "q") {
@@ -22,18 +37,5 @@ document.addEventListener("keydown", (e) => {
     createDivBox("grey");
   } else if (e.key === "e") {
     createDivBox("cyan");
-  }
-});
-
-const keyDiv = document.querySelector("#key");
-colorBox(keyDiv);
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "a") {
-    keyDiv.style.backgroundColor = "pink";
-  } else if (e.key === "s") {
-    keyDiv.style.backgroundColor = "orange";
-  } else if (e.key === "d") {
-    keyDiv.style.backgroundColor = "cyan";
   }
 });
