@@ -5,7 +5,5 @@ return a + b
 }
 */
 
-//Arrow function
-const suma = (a,b) => {
-    return a + b;
-}
+// Arrow function
+const suma = (a, b) => a + b;

@@ -14,7 +14,11 @@ createColoredBox(secondBox, "red");
 createColoredBox(thirdBox, "green");
 createColoredBox(fourthBox, "yellow");
 
-const addBlackBgColor = (eventHandler) => {
+document.body.addEventListener("click", (e) => {
+  e.target.style.backgroundColor = "black";
+});
+
+/* const addBlackBgColor = (eventHandler) => {
   eventHandler.addEventListener("click", () => {
     eventHandler.style.backgroundColor = "black";
   });
@@ -24,3 +28,4 @@ addBlackBgColor(firstBox);
 addBlackBgColor(secondBox);
 addBlackBgColor(thirdBox);
 addBlackBgColor(fourthBox);
+ */

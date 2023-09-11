@@ -5,7 +5,7 @@ return a+b+c
 }
 
 */
-//Function expression
-const example = function (a,b,c) {
-    return a+b+c;
-}
+// Function expression
+const example = function (a, b, c) {
+  return a + b + c;
+};

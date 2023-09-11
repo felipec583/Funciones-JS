@@ -1,4 +1,4 @@
-function createDiv(bgColor) {
+function createDivBox(bgColor) {
   const newDiv = document.createElement("div");
   const body = document.querySelector("body");
   body.append(newDiv);
@@ -8,7 +8,7 @@ function createDiv(bgColor) {
   newDiv.style.border = "black solid";
 }
 
-function createColoredBox(variable, bgColor = "white") {
+function colorBox(variable, bgColor = "white") {
   variable.style.height = "200px";
   variable.style.width = "200px";
   variable.style.backgroundColor = bgColor;
@@ -17,16 +17,16 @@ function createColoredBox(variable, bgColor = "white") {
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "q") {
-    createDiv("purple");
+    createDivBox("purple");
   } else if (e.key === "w") {
-    createDiv("grey");
+    createDivBox("grey");
   } else if (e.key === "e") {
-    createDiv("#6F4E37");
+    createDivBox("cyan");
   }
 });
 
 const keyDiv = document.querySelector("#key");
-createColoredBox(keyDiv);
+colorBox(keyDiv);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "a") {
@@ -34,6 +34,6 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "s") {
     keyDiv.style.backgroundColor = "orange";
   } else if (e.key === "d") {
-    keyDiv.style.backgroundColor = "aqua";
+    keyDiv.style.backgroundColor = "cyan";
   }
 });

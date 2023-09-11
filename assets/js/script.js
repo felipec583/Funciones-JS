@@ -1,16 +1,8 @@
-/* function pintar() {
-  ";
+function pintar(variable, color = "green") {
+  variable.style.backgroundColor = color;
 }
- */
-
-const pintar = (ele, color = "green") => {
-  ele.style.backgroundColor = color;
-};
-
 const ele = document.getElementById("ele1");
-pintar(ele);
-ele.addEventListener("click", () => {
-  pintar(ele, "yellow");
-});
 
-alert("bobi");
+ele.addEventListener("click", (e) => {
+  pintar(e.target, "yellow");
+});
