@@ -20,18 +20,11 @@ const keyDiv = document.querySelector("#key");
 colorBox(keyDiv);
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "a") {
-    color = "pink";
-  } else if (e.key === "s") {
-    color = "orange";
-  } else if (e.key === "d") {
-    color = "cyan";
-  } else if (e.key === "q") {
-    createDivBox("purple");
-  } else if (e.key === "w") {
-    createDivBox("grey");
-  } else if (e.key === "e") {
-    createDivBox("cyan");
-  }
+  if (e.key === "a") color = "pink";
+  else if (e.key === "s") color = "orange";
+  else if (e.key === "d") color = "cyan";
+  else if (e.key === "q") createDivBox("purple");
+  else if (e.key === "w") createDivBox("grey");
+  else if (e.key === "e") createDivBox("cyan");
   keyDiv.style.backgroundColor = color;
 });

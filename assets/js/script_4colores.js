@@ -9,23 +9,21 @@ function createColoredBox(variable, bgColor) {
   variable.style.backgroundColor = bgColor;
 }
 
-createColoredBox(firstBox, "blue");
-createColoredBox(secondBox, "red");
-createColoredBox(thirdBox, "green");
-createColoredBox(fourthBox, "yellow");
-
-document.body.addEventListener("click", (e) => {
-  e.target.style.backgroundColor = "black";
-});
-
-/* const addBlackBgColor = (eventHandler) => {
-  eventHandler.addEventListener("click", () => {
-    eventHandler.style.backgroundColor = "black";
-  });
+const coloredBoxFunctionStack = () => {
+  createColoredBox(firstBox, "blue");
+  createColoredBox(secondBox, "red");
+  createColoredBox(thirdBox, "green");
+  createColoredBox(fourthBox, "yellow");
 };
 
-addBlackBgColor(firstBox);
-addBlackBgColor(secondBox);
-addBlackBgColor(thirdBox);
-addBlackBgColor(fourthBox);
- */
+window.addEventListener("load", coloredBoxFunctionStack);
+
+document.body.addEventListener("click", (e) => {
+  if (
+    e.target.style.backgroundColor === "black"
+  ) {
+    coloredBoxFunctionStack();
+  } else {
+    e.target.style.backgroundColor = "black";
+  }
+});
