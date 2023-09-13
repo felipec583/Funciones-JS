@@ -23,7 +23,7 @@ document.body.addEventListener("click", (e) => {
     e.target.style.backgroundColor === "black"
   ) {
     coloredBoxFunctionStack();
-  } else {
+  } else if (!(e.target === document.body)) {
     e.target.style.backgroundColor = "black";
   }
 });
