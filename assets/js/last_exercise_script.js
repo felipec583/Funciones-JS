@@ -25,6 +25,6 @@ document.addEventListener("keydown", (e) => {
   else if (e.key === "d") color = "cyan";
   else if (e.key === "q") createDivBox("purple");
   else if (e.key === "w") createDivBox("grey");
-  else if (e.key === "e") createDivBox("cyan");
+  else if (e.key === "e") createDivBox("#6F4E37");
   keyDiv.style.backgroundColor = color;
 });
