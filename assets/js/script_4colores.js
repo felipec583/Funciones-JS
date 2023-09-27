@@ -18,11 +18,16 @@ const coloredBoxFunctionStack = () => {
 
 window.addEventListener("load", coloredBoxFunctionStack);
 
+const coloredBox = {
+  "first-box": "blue",
+  "second-box": "red",
+  "third-box": "green",
+  "fourth-box": "yellow",
+};
+
 document.body.addEventListener("click", (e) => {
-  if (
-    e.target.style.backgroundColor === "black"
-  ) {
-    coloredBoxFunctionStack();
+  if (e.target.style.backgroundColor === "black") {
+    e.target.style.backgroundColor = coloredBox[e.target.getAttribute("id")];
   } else if (!(e.target === document.body)) {
     e.target.style.backgroundColor = "black";
   }
